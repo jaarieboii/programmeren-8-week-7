@@ -8,20 +8,27 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
     <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
 
     <script defer src="predict.js" type="module"></script>
     <title>ML5 Neural Network Regression</title>
 </head>
 
-<body>
-    <a href="./index.html">Home</a>
-    <div><h2>ML5 Neural Network Regression resultaten</h2></div>
+<body class="bg-gray-100">
+    <a href="./index.html" class="text-blue-500 hover:text-blue-700">Home</a>
 
-    <input type="number" id="fieldhp" placeholder="Horsepower" />
-    <input type="number" id="fieldwg" placeholder="Weight" />
-    <input type="number" id="fieldcy" placeholder="Cylinders" />
-    <button id="btn">Voorspel!</button>
-    <div id="result"></div> 
+    <div class="mt-8 mb-4 text-2xl font-bold text-center">ML5 Neural Network Regression resultaten</div>
+
+    <div class="flex flex-col items-center justify-center">
+        <input type="number" id="fieldhp" placeholder="Horsepower" class="px-4 py-2 my-2 text-lg text-gray-800 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"/>
+        <input type="number" id="fieldwg" placeholder="Weight" class="px-4 py-2 my-2 text-lg text-gray-800 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"/>
+        <input type="number" id="fieldcy" placeholder="Cylinders" class="px-4 py-2 my-2 text-lg text-gray-800 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"/>
+
+        <button id="btn" class="px-4 py-2 my-2 text-lg text-white bg-blue-500 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">Voorspel!</button>
+
+        <div id="result" class="mt-4 text-xl font-medium text-center"></div> 
+    </div>
 </body>
 
 </html>

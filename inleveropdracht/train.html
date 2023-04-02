@@ -8,21 +8,30 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
     <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
 
     <script defer src="train.js" type="module"></script>
     <title>ML5 Neural Network Regression</title>
 </head>
 
-<body>
-    <a href="./index.html">Home</a>
+<body class="flex flex-col ">
+    <div class="bg-gray-200 p-4">
+        <a href="./index.html" class="text-blue-500 hover:underline">Home</a>
+    </div>
 
-    <div><h2>ML5 Neural Network Regression</h2></div>
-    <canvas id="myChart" width="300" height="200"></canvas>
+    <div class="flex-grow flex flex-col justify-center items-center">
+        <h2 class="text-2xl font-bold mb-8">ML5 Neural Network Regression</h2>
+        <canvas id="myChart" width="300" height="200" class="mb-8"></canvas>
 
-    <input type="text" id="field" placeholder="horsepower" />
-    <button id="btn">Voorspel!</button>
-    <button id="save">Save Model</button>
-    <div id="result"></div> 
+        <div class="flex justify-center items-center">
+            <input type="number" id="field" placeholder="horsepower" class="border rounded-l-full py-2 px-4 border-gray-400" />
+            <button id="btn" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-r-full ml-2">Voorspel!</button>
+            <button id="save" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full ml-2">Save Model</button>
+        </div>
+        
+        <div id="result" class="mt-4"></div> 
+    </div>
 </body>
 
 </html>
